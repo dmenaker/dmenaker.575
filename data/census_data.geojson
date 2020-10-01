@@ -1,0 +1,365 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Montgomery, AL",
+        "state": "SOUTH",
+        "location": "the National Memorial for Peace and Justice",
+        "detail": "This memorial is a visual reminder of the thousands of Americans lynched at the hands of thier neighbors",
+        "Pop_1850": 19542,
+        "Pop_1870": 31285,
+        "Pop_1890": 41485,
+        "Pop_1910": 56867,
+        "Pop_1930": 52144,
+        "Pop_1950": 42538,
+        "Pop_1970": 44523,
+        "Pop_1990": 105196
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.313544,
+          32.372198
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Washington, DC",
+        "state": "NORTH",
+        "location": "the Frederick Douglass National Historic Site",
+        "detail": "The last residence of Frederick Douglass",
+        "Pop_1850": 13746,
+        "Pop_1870": 43404,
+        "Pop_1890": 76672,
+        "Pop_1910": 94446,
+        "Pop_1930": 132068,
+        "Pop_1950": 280803,
+        "Pop_1970": 537705,
+        "Pop_1990": 1041934
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.985187,
+          38.863405
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Savannah, GA",
+        "state": "SOUTH",
+        "location": "the First African Baptist Church",
+        "detail": "Home to the oldest Black congregation in North America",
+        "Pop_1850": 14749,
+        "Pop_1870": 24518,
+        "Pop_1890": 34757,
+        "Pop_1910": 43081,
+        "Pop_1930": 49707,
+        "Pop_1950": 48282,
+        "Pop_1970": 53111,
+        "Pop_1990": 86228
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.096061,
+          32.08131
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Chicago, IL",
+        "state": "NORTH",
+        "location": "the Monmument to the Great Northern Migration",
+        "detail": "Statue honoring those who made the journey north",
+        "Pop_1850": 378,
+        "Pop_1870": 3858,
+        "Pop_1890": 14910,
+        "Pop_1910": 46627,
+        "Pop_1930": 246992,
+        "Pop_1950": 572180,
+        "Pop_1970": 1102620,
+        "Pop_1990": 1332919
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.61752,
+          41.846876
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "New Orleans, LA",
+        "state": "SOUTH",
+        "location": "the former site of the St. Louis Hotel",
+        "detail": "The St. Louis Hotel had a long history as a location for the sale of enslaved Africans",
+        "Pop_1850": 28029,
+        "Pop_1870": 50456,
+        "Pop_1890": 64491,
+        "Pop_1910": 89262,
+        "Pop_1930": 129632,
+        "Pop_1950": 181775,
+        "Pop_1970": 267294,
+        "Pop_1990": 430470
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.065287,
+          29.955901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Baltimore, MD",
+        "state": "NORTH",
+        "location": "the Lillie Carroll Jackson Civil Rights Museum",
+        "detail": "Former home to Baltimore Chapter NAACP president and civil rights activist",
+        "Pop_1850": 35793,
+        "Pop_1870": 47921,
+        "Pop_1890": 67104,
+        "Pop_1910": 84749,
+        "Pop_1930": 142100,
+        "Pop_1950": 225099,
+        "Pop_1970": 420210,
+        "Pop_1990": 616065
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.626981,
+          39.304371
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Boston, MA",
+        "state": "NORTH",
+        "location": "the Lewis and Harriet Hayden House",
+        "detail": "Home of a former slave who escaped through the Underground Railroad who later went on to serve as a state representative",
+        "Pop_1850": 2038,
+        "Pop_1870": 3735,
+        "Pop_1890": 8845,
+        "Pop_1910": 13880,
+        "Pop_1930": 21026,
+        "Pop_1950": 40057,
+        "Pop_1970": 104707,
+        "Pop_1990": 209970
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06906,
+          42.36026
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Detroit, MI",
+        "state": "NORTH",
+        "location": "the Second Baptist Church",
+        "detail": "The church sheltered nearly 5,000 fugitive slaves as a stop on the Underground Railroad",
+        "Pop_1850": 724,
+        "Pop_1870": 2683,
+        "Pop_1890": 3815,
+        "Pop_1910": 6085,
+        "Pop_1930": 131747,
+        "Pop_1950": 300506,
+        "Pop_1970": 660428,
+        "Pop_1990": 943479
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.042961,
+          42.334806
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Jackson, MS",
+        "state": "SOUTH",
+        "location": "the Medgar Evers Home Museum",
+        "detail": "Home of the first NAACP field sectretary and prominent civil rights organizer. Assasinated at his home in 1963 by the KKK",
+        "Pop_1850": 16650,
+        "Pop_1870": 20659,
+        "Pop_1890": 28368,
+        "Pop_1910": 45407,
+        "Pop_1930": 40559,
+        "Pop_1950": 40168,
+        "Pop_1970": 61063,
+        "Pop_1990": 167899
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.212647,
+          32.340837
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "New York, NY",
+        "state": "NORTH",
+        "location": "Seneca Village",
+        "detail": "A vibrant community, home to 250 free Blacks from the 1820's to the 1850's in what is now Central Park. All residents were ordered to leave so the city could build the park",
+        "Pop_1850": 21921,
+        "Pop_1870": 23303,
+        "Pop_1890": 39401,
+        "Pop_1910": 91709,
+        "Pop_1930": 327706,
+        "Pop_1950": 747608,
+        "Pop_1970": 1668115,
+        "Pop_1990": 2250026
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.968929,
+          40.783996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Charlotte, NC",
+        "state": "SOUTH",
+        "location": "Old City Hall",
+        "detail": "Location of only coup d'etat in American history, when White supremicist Alfred Moore Waddell declared himself the mayor, following the election of 1898",
+        "Pop_1850": 5629,
+        "Pop_1870": 10721,
+        "Pop_1890": 19526,
+        "Pop_1910": 25481,
+        "Pop_1930": 38023,
+        "Pop_1950": 37616,
+        "Pop_1970": 72972,
+        "Pop_1990": 231654
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.838294,
+          35.221991
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Philadelphia, PA",
+        "state": "NORTH",
+        "location": "Cliveden",
+        "detail": "Home of the Chew family, who owned slave plantations in Pennsylvania, Maryland, and Delaware",
+        "Pop_1850": 19761,
+        "Pop_1870": 22147,
+        "Pop_1890": 39371,
+        "Pop_1910": 84459,
+        "Pop_1930": 219599,
+        "Pop_1950": 376041,
+        "Pop_1970": 653791,
+        "Pop_1990": 929907
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.181442,
+          40.047526
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Charleston ,SC",
+        "state": "SOUTH",
+        "location": "Sullivan's Island",
+        "detail": "Sullivan's Island was the arrival point for tens of thousands of enslaved Africans torn from their homes between 1700 and 1775",
+        "Pop_1850": 58636,
+        "Pop_1870": 60603,
+        "Pop_1890": 35073,
+        "Pop_1910": 56033,
+        "Pop_1930": 54812,
+        "Pop_1950": 68055,
+        "Pop_1970": 77884,
+        "Pop_1990": 153227
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.85675,
+          32.759176
+        ]
+      }
+    },
+    {
+      "type": "Feature", 
+      "properties": {
+        "City": "Dallas, TX", 
+        "state": "NORTH",
+        "location": "the Dallas Historical Society",
+        "detail": "Permanent home to General Order Number 3 Emancipation Proclamation issued by Union General Gordon Granger on June 19, 1865. This date would go on to be celebrated by Black people in American as Juneteenth",
+        "Pop_1850": 207,
+        "Pop_1870": 2109,
+        "Pop_1890": 11177,
+        "Pop_1910": 24355,
+        "Pop_1930": 47879,
+        "Pop_1950": 56958,
+        "Pop_1970": 210238,
+        "Pop_1990": 410766
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.761255,
+          32.780792
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Richmond, VA",
+        "state": "SOUTH",
+        "location": "the Jefferson Davis Memorial",
+        "detail": "Statue and monument honoring the only President of the Confederate States; erected in 1907, substantially removed in 2020",
+        "Pop_1850": 19746,
+        "Pop_1870": 31031,
+        "Pop_1890": 43595,
+        "Pop_1910": 53570,
+        "Pop_1930": 59494,
+        "Pop_1950": 72996,
+        "Pop_1970": 104766,
+        "Pop_1990": 252340
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.467676,
+          37.558378
+        ]
+      }
+    }
+  ]
+}

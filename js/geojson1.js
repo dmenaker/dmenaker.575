@@ -1,30 +1,39 @@
-/* Map of GeoJSON data from MegaCities.geojson */
+/* GEOG 575 Lab 1 Menaker, David */
 
 //function to instantiate the Leaflet map
 function createMap(){
     //create the map
     var map = L.map('map', {
-        center: [20, 0],
-        zoom: 2
+        center: [38, -95], //y,x
+        zoom: 4
     });
 
-    //add OSM base tilelayer
-    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    //add esri basemap tilelayer
+    var esri = L.esri.basemapLayer('DarkGray').addTo(map);
+    
+    //add osm basemap tilelayer
+    var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-    }).addTo(map);
+    });   
+    
+    //define basemaps and add switcher control
+    var basemaps = {
+        "Dark": esri,
+        "Light": osm
+    };
+
+    L.control.layers(basemaps).addTo(map);
 
     //call getData function
     getData(map);
 };
 
-//
-//==============================================================================
-//
+//=====================================================================================================================
 
 //function to attach popups to each mapped feature
 function onEachFeature(feature, layer) {
     
-    //no property named popupContent; instead, create html string with all properties
+    //create html string with all properties
     var popupContent = "";
     if (feature.properties) {
         
@@ -33,12 +42,10 @@ function onEachFeature(feature, layer) {
             popupContent += "<p>" + property + ": " + feature.properties[property] + "</p>";
         }
         layer.bindPopup(popupContent);
-    };
+    };    
 };
 
-//
-//==============================================================================
-//
+//=====================================================================================================================
 
 //function to convert markers to circle markers
 function pointToLayer(feature, latlng, attributes){
@@ -52,7 +59,7 @@ function pointToLayer(feature, latlng, attributes){
         color: "#000",
         weight: 1,
         opacity: 1,
-        fillOpacity: 0.8
+        fillOpacity: 0.4
     };
 
     //For each feature, determine its value for the selected attribute
@@ -70,8 +77,14 @@ function pointToLayer(feature, latlng, attributes){
     //add popup to circle marker
     popup.bindToLayer();
     
+    //original popupContent changed to panelContent...Example 2.2 line 1
+    var panelContent = "<p>The detailed location shown for " + feature.properties.City + " is " + feature.properties.location + "</p>" + feature.properties.detail;
 
-    
+    //add formatted attribute to panel content string
+    //var year = attribute.split("_")[1];
+    //panelContent += <p>feature.properties + " million</p>";
+
+        
     //event listeners to open popup on hover
     layer.on({
         mouseover: function(){
@@ -80,39 +93,37 @@ function pointToLayer(feature, latlng, attributes){
         mouseout: function(){
             this.closePopup();
         },
-        //click: function(){
-        //    $("#panel").html(popupContent);
-        //}
+        click: function(){
+            $("#panel").html(panelContent);
+        }
     });
 
     //return the circle marker to the L.geoJson pointToLayer option
     return layer;
 };
 
-//
-//==============================================================================
-//
+//=====================================================================================================================
 
 //Add circle markers for point features to the map
 function createPropSymbols(data, map, attributes){
     
     //create a Leaflet GeoJSON layer and add it to the map
-    L.geoJson(data, {
+    var markers = L.geoJson(data, {
         pointToLayer: function(feature, latlng){
             return pointToLayer(feature, latlng, attributes);
         }
-    }).addTo(map);
+    });
+    markers.addTo(map);
 };
 
-//
-//==============================================================================
-//
+
+//=====================================================================================================================
 
 //calculate the radius of each proportional symbol
 function calcPropRadius(attValue) {
     
     //scale factor to adjust symbol size evenly
-    var scaleFactor = 20;
+    var scaleFactor = 0.01;
     
     //area based on attribute value and scale factor
     var area = attValue * scaleFactor;
@@ -123,20 +134,18 @@ function calcPropRadius(attValue) {
     return radius;
 };
 
-//
-//==============================================================================
-//
+//=====================================================================================================================
 
 //function to retrieve the data and place it on the map
 function getData(map){
     
     //load the data
-    $.ajax("data/MegaCities.geojson", {
+    $.ajax("data/census_data.geojson", {
         dataType: "json",
         success: function(response){
             //create an attributes array
             var attributes = processData(response);
-            
+
             //call function to create proportional symbols
             createPropSymbols(response, map, attributes);
             createSequenceControls(map, attributes);
@@ -145,10 +154,7 @@ function getData(map){
     });
 };
 
-
-//
-//==============================================================================
-//
+//=====================================================================================================================
 
 //build an attributes array from the data
 function processData(data){
@@ -170,9 +176,7 @@ function processData(data){
     return attributes;
 };
 
-//
-//==============================================================================
-//
+//=====================================================================================================================
 
 //Popup constructor function
 function Popup(properties, attribute, layer, radius){
@@ -181,7 +185,7 @@ function Popup(properties, attribute, layer, radius){
     this.layer = layer;
     this.year = attribute.split("_")[1];
     this.population = this.properties[attribute];
-    this.content = "<p><b>City:</b> " + this.properties.City + "</p><p><b>Population in " + this.year + ":</b> " + this.population + " million</p>";
+    this.content = "<p><b>The black population in " + this.properties.City + "</p><p>in " + this.year + " was: " + this.population + " </b></p>";
 
     this.bindToLayer = function(){
         this.layer.bindPopup(this.content, {
@@ -190,9 +194,7 @@ function Popup(properties, attribute, layer, radius){
     };
 };
 
-//
-//==============================================================================
-//
+//=====================================================================================================================
 
 //Resize proportional symbols according to new attribute values
 function updatePropSymbols(map, attribute){
@@ -217,9 +219,7 @@ function updatePropSymbols(map, attribute){
     updateLegend(map, attribute);
 };
 
-//
-//==============================================================================
-//
+//=====================================================================================================================
 
 function createLegend(map, attributes){
     var LegendControl = L.Control.extend({
@@ -271,17 +271,16 @@ function createLegend(map, attributes){
     updateLegend(map, attributes[0]);
 };
 
-//
-//==============================================================================
-//
+//=====================================================================================================================
 
 //Update the legend with new attribute
 function updateLegend(map, attribute){
     
     //create content for legend
     var year = attribute.split("_")[1];
-    var content = "Population in " + year ;
+    var content = "<b>Population in " + year + "</b>";
 
+    
     //replace legend content
     $('#temporal-legend').html(content);
     
@@ -300,13 +299,11 @@ function updateLegend(map, attribute){
         });
         
         //add legend text
-        $('#'+key+'-text').text(Math.round(circleValues[key]*100)/100 + " million");
+        $('#'+key+'-text').text(Math.round(circleValues[key]*100)/100 + " ");
     };
 };
 
-//
-//==============================================================================
-//
+//=====================================================================================================================
 
 //Calculate the max, mean, and min values for a given attribute
 function getCircleValues(map, attribute){
@@ -344,9 +341,7 @@ function getCircleValues(map, attribute){
     };
 };
 
-//
-//==============================================================================
-//
+//=====================================================================================================================
 
 function createSequenceControls(map, attributes){
     var SequenceControl = L.Control.extend({
@@ -395,12 +390,12 @@ function createSequenceControls(map, attributes){
             index++;
             
             //if past the last attribute, wrap around to first attribute
-            index = index > 6 ? 0 : index;
+            index = index > 7 ? 0 : index;
         } else if ($(this).attr('id') == 'reverse'){
             index--;
             
             //if past the first attribute, wrap around to last attribute
-            index = index < 0 ? 6 : index;
+            index = index < 0 ? 7 : index;
         }
 
         //update slider
@@ -410,7 +405,7 @@ function createSequenceControls(map, attributes){
     
     //set slider attributes
     $('.range-slider').attr({
-        max: 6,
+        max: 7,
         min: 0,
         value: 0,
         step: 1
@@ -426,9 +421,6 @@ function createSequenceControls(map, attributes){
     });
 };
 
-//
-//==============================================================================
-//
-
+//=====================================================================================================================
 
 $(document).ready(createMap);
