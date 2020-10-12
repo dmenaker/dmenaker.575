@@ -7,12 +7,12 @@
 }
 
 #panel {
-    width: 100%;
-    padding: 20px;
-    display: inline-block;
+    width: 60%;
+    padding: 10px;
     vertical-align: top;
     text-align: center;
-    line-height: 42px;
+    line-height: 40px;
+    margin: auto;
 }
 
 .range-slider {
@@ -53,18 +53,3 @@
 .leaflet-popup-content p {
     margin: 0.2em 0;
 }
-
-/*
-.footer {
-  background-color: #333;
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-*/
-
-/*
-.navbar a:hover {
-  color: red;
-}*/
