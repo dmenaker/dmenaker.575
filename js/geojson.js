@@ -276,9 +276,9 @@ function createLegend(map, attributes){
             
             //array of circle names to base loop on
             var circles = {
-                max: 20,
-                mean: 40,
-                min: 60
+                max: 40,
+                mean: 60,
+                min: 80
             };
 
             //loop to add each circle and text to svg string
@@ -288,7 +288,7 @@ function createLegend(map, attributes){
                 svg += '<circle class="legend-circle" id="' + circle + '" fill="#ff7800" fill-opacity="0.8" stroke="#000000" cx="40"/>';
 
             //text string
-            svg += '<text id="'+ circle +'-text" x="75" y="'+ circles[circle] +'"></text>';
+            svg += '<text id="'+ circle +'-text" x="95" y="'+ circles[circle] +'"></text>';
             
             };
             
@@ -312,7 +312,7 @@ function updateLegend(map, attribute){
     
     //create content for legend
     var year = attribute.split("_")[1];
-    var content = "<b>Population in " + year + "</b>";
+    var content = "<b>Population in " + year + "</b><br><br><br>max / mean / min";
 
     
     //replace legend content
