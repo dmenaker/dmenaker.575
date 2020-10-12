@@ -5,20 +5,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="index">
         <meta name="author" content="Menaker, David">
-		<title>575-Lab 1-Menaker, Dave</title>
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">     
+		<title>575-Lab 1: Menaker, Dave</title>
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">    
 		<link rel="stylesheet" href="lib/leaflet.css">
         <link rel="stylesheet" href="css/style.css">
+        
         <script src="lib/jquery-3.5.1.js"></script>
+        <script src="vendor/jquery/jquery.min.js"></script>
         <script src="lib/leaflet.js"></script>
         <script src="https://unpkg.com/esri-leaflet@2.5.0/dist/esri-leaflet.js"
         integrity="sha512-ucw7Grpc+iEQZa711gcjgMBnmd9qju1CICsRaryvX7HJklK0pGl/prxKvtHwpgm5ZHdvAil7YPxI1oWPOWK3UQ=="
         crossorigin=""></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <script src="js/geojson1.js"></script>
-                    <script src="vendor/jquery/jquery.min.js"></script>
-            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>         
+        <script src="js/geojson.js"></script>
+        
         <style>
+            
         body {
             padding-top: 60px;
             padding-bottom: 40px;
@@ -29,35 +32,27 @@
           
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 
-                <h1 style="color: #ffffff; font-size: 30px; font-style: italic;">The Great Migration</h1>
-
-                <div class="navbar-header">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
+                <h1 style="color: #ff7800; font-size: 30px; font-style: italic;"><a href="https://www.smithsonianmag.com/history/long-lasting-legacy-great-migration-180960118/">The Great Migration </a></h1>" "<h1 style="color: #ff7800; font-size: 20px; vertical-align: bottom; font-style: italic;"> millions of Black families flee the south to escape Jim Crow</h1>
             </nav>
 
             <div class="container-fluid">
                 <div class="row-fluid">
                     <div class="span5">
-                        <div id="map">
-                        </div>
+                        <div id="map"></div>
                     </div>
-                    <div class="span7">      
+                    <div class="span3">      
                         <div id="panel">
                           <table>
                             <tr>
                               <td></td>
-                              <td id = 'summaryLabel'><p>Cycle the map to see the population change over 20 year periods. Click a marker on the map to get more information.</p></td>
+                              <td id = 'summaryLabel'><p>Step through the timeline to see how the Black population of major cities in America changed between 1850 and 1990.<br>While The Great Migration occured between 1910 and 1970, you can observe the population in northern cities starting to rise significantly after the Civil War.<br>Click a marker on the map to get more information about that city.</p></td>
                             </tr>
                           </table>
-                        <div id="assets/metroImage"></div>
-                      </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-        </body>
+    </body>
 
 </html>

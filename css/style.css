@@ -1,6 +1,6 @@
 
 #map { 
-    height: 500px;
+    height: 400px;
     width: 100%;
     margin-top: 10px;
     display: inline-block;
@@ -22,22 +22,22 @@
 .sequence-control-container {
     width: 330px;
     height: 50px;
-    background-color: rgba(255,255,255,0.4);
+/*    background-color: rgba(255,255,255,0.4);*/
     padding: 10px;
     line-height: 0px;
     text-align: center;
-    border: solid gray 1px;
+/*    border: solid gray 1px;*/
 }
 
 
 .legend-control-container {
-    width: 150px;
-    height: 300px;
+    width: 180px;
+    height: 115px;
     background-color: rgba(255,255,255,0.8);
     padding: 10px;
     line-height: 5px;
     text-align: center;
-    align-items: center;
+    align-items: right;
     border: solid gray 1px;
 }
 
